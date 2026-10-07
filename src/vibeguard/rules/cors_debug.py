@@ -18,7 +18,7 @@ CORS_PATTERNS = [
     ),
     # JavaScript/Express CORS wildcard
     (
-        r"""(?i)cors\s*\(\s*\{[^}]*origin\s*:\s*['"]\*['"]""",
+        r"""(?i)cors\s*\(\s*\{[^}]*origin\s*:\s*(["'])\*(?:\1|$)""",
         "CORS origin set to wildcard (*) — allows any domain",
     ),
     # Regex-based CORS (dangerous)
